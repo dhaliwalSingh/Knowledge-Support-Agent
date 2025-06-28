@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Knowledge Support Chat" icon-name="custom:custom63">
+        <div class="slds-p-around_medium custom-chat-container slds-grid slds-grid_vertical slds-scrollable_none">
+            <div class="chat-window slds-grow slds-p-around_medium slds-grid slds-grid_vertical">
+                <template if:true={chatHistory}>
+                    <template for:each={chatHistory} for:item="msg">
+                        <div key={msg.id} class={msg.senderClass}>
+                            <div class="chat-bubble" lwc:dom="manual" data-id={msg.id}></div>
+                        </div>
+                    </template>
+                </template>
+            </div>
+
+            <div class="slds-m-top_medium chat-input-area slds-p-top_medium">
+                <lightning-textarea
+                    label="Ask a question"
+                    value={userQuestion}
+                    onchange={handleChange}
+                    placeholder="Type your question here..."
+                    class="chat-textarea"
+                ></lightning-textarea>
+
+                <div class="slds-grid slds-grid_align-end slds-m-top_x-small">
+                    <lightning-button
+                        variant="neutral"
+                        label="New Conversation"
+                        onclick={handleNewConversation}
+                        class="slds-m-right_small"
+                    ></lightning-button>
+                    <lightning-button
+                        variant="brand"
+                        label="Ask"
+                        onclick={handleAsk}
+                        class="slds-m-left_x-small"
+                    ></lightning-button>
+                </div>
+
+                <template if:true={isLoading}>
+                    <div class="slds-m-top_small slds-align_absolute-center">
+                        <lightning-spinner alternative-text="Loading..." size="small"></lightning-spinner>
+                        <span class="slds-m-left_x-small">Thinking...</span>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>
