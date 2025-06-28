@@ -1,0 +1,57 @@
+.chat-window {
+    border: 1px solid #ddd;
+    
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.msg-user {
+    text-align: right;
+    margin-bottom: 0.75rem;
+}
+
+.msg-agent {
+    text-align: left;
+    margin-bottom: 0.75rem;
+}
+
+.chat-bubble {
+    
+    padding: 0.75rem 1rem;
+    border-radius: 20px;
+    background-color: #e8f0fe;
+    color: #333;
+    font-size: 0.95rem;
+    max-width: 85%;
+    word-wrap: break-word;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Add specific rich text styling inside chat bubbles */
+.chat-bubble h1, .chat-bubble h2, .chat-bubble h3 {
+    font-weight: 600;
+    margin: 0.5rem 0 0.3rem;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+.chat-bubble p {
+    margin: 0.3rem 0;
+    line-height: 1.4rem;
+}
+
+.chat-bubble ul, .chat-bubble ol {
+    margin: 0.4rem 1.2rem;
+    padding-left: 1rem;
+}
+
+.chat-bubble li {
+    margin-bottom: 0.3rem;
+}
+
+.chat-bubble a {
+    color: #0066cc;
+    text-decoration: underline;
+}

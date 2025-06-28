@@ -1,33 +1,18 @@
-# 🔎 AgentForce Knowledge Support Chat
+# Salesforce DX Project: Next Steps
 
-This is a Salesforce-native AI chatbot application built using **Lightning Web Components (LWC)** and **AgentForce (Einstein GPT)**. The application allows users to chat with a custom AI agent powered by Salesforce's native language model, which uses real-time retrieval from **Knowledge Articles** to provide relevant, contextual answers.
+Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
-## 🌟 Key Features
+## How Do You Plan to Deploy Your Changes?
 
-- 🔁 **Session-aware AI agent** that remembers context across messages
-- 📚 **Retrieval-Augmented Generation (RAG)** using native `Knowledge__kav` articles
-- 🧠 Intelligent, natural language Q&A with article citation support
-- 📎 Related article links with clickable titles
-- 💬 Fully responsive chat interface with rich formatting
-- 💡 `New Conversation` button to reset session and chat history
+Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
 
-## ⚙️ Technologies Used
+## Configure Your Salesforce DX Project
 
-| Stack | Tools |
-|-------|-------|
-| **Frontend** | Lightning Web Components (LWC) |
-| **Backend** | Apex, Invocable.Action for AgentForce integration |
-| **AI Agent** | Salesforce Agent Builder (AgentForce) |
-| **Knowledge Base** | Native `Knowledge__kav` articles |
-| **Formatting** | Rich HTML rendering + Markdown-style parsing in JS |
+The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
 
-## 🏗️ Architecture
+## Read All About It
 
-```plaintext
-User ↔️ LWC Chat UI
-        ↓
-    Apex Class (AgentForceAgentCaller.cls)
-        ↓
-Salesforce AgentForce (Custom AI Agent)
-        ↕
-Knowledge__kav articles (retrieved natively using prompt + context)
+- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
+- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
+- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
+- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
